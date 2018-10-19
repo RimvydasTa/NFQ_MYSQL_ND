@@ -11,7 +11,7 @@ insert into Books set Books.authorId = 9, Books.title = 'Harry Potter And the Ch
 insert into Books set Books.authorId = 8, Books.title = 'The Forest Of Gods',  Books.year = 1949;
 
 
-update Books set authorId = 1 where bookId = 5;
+update Books set authorId = 1 where bookId = 6;
 
 
 

@@ -1,9 +1,9 @@
-select n.newsId, n.date, n.text, c.commentDate, c.text from
+select n.newsId, n.date, n.text, c.date, c.text from
               News n
           inner join
               Comments c on n.newsId = c.newsId
           inner join
-(select max(Comments.commentDate) lastDate, Comments.newsId
+(select max(c.date) lastDate, c.newsId
 from Comments
-group by Comments.newsId) lastComment on c.newsId = lastComment.newsId and c.commentDate = lastComment.lastDate
+group by c.newsId) lastComment on c.newsId = lastComment.newsId and c.date = lastComment.lastDate
 order by n.date desc limit 10
