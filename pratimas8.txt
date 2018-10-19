@@ -1,4 +1,4 @@
-CREATE TABLE Book_2_author (
+create table Book_2_author (
   ID int NOT NULL AUTO_INCREMENT,
   authorId int NOT NULL,
   bookId int NOT NULL,
@@ -9,32 +9,23 @@ CREATE TABLE Book_2_author (
 
 alter table Books drop authorId;
 
-insert into Book_2_author set authorId = 1, bookId = 2;
 
-insert into Book_2_author set authorId = 2, bookId = 2;
+insert into Book_2_author ( authorId, bookId )
+values 
+( 1, 2), 
+( 2, 2),
+( 4, 3), 
+( 6, 3),
+( 6, 4), 
+( 6, 5),
+( 4, 5), 
+( 1, 6),
+( 2, 6), 
+( 4, 7),
+( 1, 8), 
+( 2, 8),
+( 6, 8), 
+( 4, 10),
+( 7, 1)
+;
 
-insert into Book_2_author set authorId = 4, bookId = 3;
-
-insert into Book_2_author set authorId = 6, bookId = 3;
-
-insert into Book_2_author set authorId = 6, bookId = 4;
-
-insert into Book_2_author set authorId = 6, bookId = 5;
-
-insert into Book_2_author set authorId = 4, bookId = 5;
-
-insert into Book_2_author set authorId = 1, bookId = 6;
-
-insert into Book_2_author set authorId = 2, bookId = 6;
-
-insert into Book_2_author set authorId = 4, bookId = 7;
-
-insert into Book_2_author set authorId = 1, bookId = 8;
-
-insert into Book_2_author set authorId = 2, bookId = 8;
-
-insert into Book_2_author set authorId = 6, bookId = 8;
-
-insert into Book_2_author set authorId = 4, bookId = 10;
-
-insert into Book_2_author set authorId = 7, bookId = 1;

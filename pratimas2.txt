@@ -2,11 +2,17 @@ insert into Authors set Authors.name = 'Balys Sruoga';
 
 insert into Authors set Authors.name = 'JK.Rowling';
 
-insert into Books (authorId, title, year) values (8, 'Intro to php', 2006);
 
-insert into Books (authorId, title, year) values (9, 'Harry Potter And the Chamber Of Secrets', 1950);
 
-insert into Books (authorId, title, year) values (8, 'The Forest Of Gods', 1949);
+insert into Books set Books.authorId = 8, Books.title = 'Intro to php',  Books.year = 2006;
+
+insert into Books set Books.authorId = 9, Books.title = 'Harry Potter And the Chamber Of Secrets',  Books.year = 1950;
+
+insert into Books set Books.authorId = 8, Books.title = 'The Forest Of Gods',  Books.year = 1949;
+
 
 update Books set authorId = 1 where bookId = 5;
+
+
+
 
