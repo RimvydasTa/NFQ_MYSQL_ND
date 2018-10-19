@@ -1,0 +1,5 @@
+select b.title, b.year from Books b
+union
+select a.authorId, a.name from Authors a;
+
+

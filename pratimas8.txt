@@ -1,0 +1,12 @@
+CREATE TABLE Book_2_author (
+  ID int NOT NULL AUTO_INCREMENT,
+  authorId int NOT NULL,
+  bookId int NOT NULL,
+  PRIMARY KEY (ID)
+
+);
+
+
+alter table Books drop authorId;
+
+

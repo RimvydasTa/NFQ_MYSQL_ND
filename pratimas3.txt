@@ -1,0 +1,2 @@
+delete from Authors where authorId = 8 or authorId = 9;
+

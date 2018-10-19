@@ -1,0 +1,56 @@
+CREATE TABLE Book_2_author (
+  ID int NOT NULL AUTO_INCREMENT,
+  authorId int NOT NULL,
+  bookId int NOT NULL,
+  PRIMARY KEY (ID)
+
+);
+
+
+
+alter table Books drop authorId;
+
+
+insert into Book_2_author set authorId = 1, bookId = 2;
+
+insert into Book_2_author set authorId = 2, bookId = 2;
+
+insert into Book_2_author set authorId = 4, bookId = 3;
+
+insert into Book_2_author set authorId = 6, bookId = 3;
+
+insert into Book_2_author set authorId = 6, bookId = 4;
+
+insert into Book_2_author set authorId = 6, bookId = 5;
+
+insert into Book_2_author set authorId = 4, bookId = 5;
+
+insert into Book_2_author set authorId = 1, bookId = 6;
+
+insert into Book_2_author set authorId = 2, bookId = 6;
+
+insert into Book_2_author set authorId = 4, bookId = 7;
+
+insert into Book_2_author set authorId = 1, bookId = 8;
+
+insert into Book_2_author set authorId = 2, bookId = 8;
+
+insert into Book_2_author set authorId = 6, bookId = 8;
+
+insert into Book_2_author set authorId = 4, bookId = 10;
+
+
+
+select b.title,  group_concat(a.name separator ',') as Authors_group from Books b
+                 left join Book_2_author b2a on b2a.bookId = b.bookId
+                 left join Authors a on a.authorId = b2a.authorId group by b.title order by b.title;
+
+
+
+alter table Books convert to character set utf8 collate utf8_unicode_ci;
+
+
+update Books set Books.title = 'Dievų Miškas' where bookId = 11;
+
+
+

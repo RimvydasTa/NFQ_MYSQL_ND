@@ -1,0 +1,6 @@
+select a.name, count(title) from Authors a left join Books b on a.authorId = b.authorId group by a.authorId;
+
+select a.name, count(title) from Authors a inner join Books b on a.authorId = b.authorId   group by a.authorId;
+
+delete Authors from Authors left join Books on Authors.authorId = Books.authorId where Books.title is null;
+

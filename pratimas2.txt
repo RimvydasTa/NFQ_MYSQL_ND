@@ -1,0 +1,12 @@
+insert into Authors set Authors.name = 'Balys Sruoga';
+
+insert into Authors set Authors.name = 'JK.Rowling';
+
+insert into Books (authorId, title, year) values (8, 'Intro to php', 2006);
+
+insert into Books (authorId, title, year) values (9, 'Harry Potter And the Chamber Of Secrets', 1950);
+
+insert into Books (authorId, title, year) values (8, 'The Forest Of Gods', 1949);
+
+update Books set authorId = 1 where bookId = 5;
+
