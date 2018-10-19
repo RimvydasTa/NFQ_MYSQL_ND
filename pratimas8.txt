@@ -9,4 +9,32 @@ CREATE TABLE Book_2_author (
 
 alter table Books drop authorId;
 
+insert into Book_2_author set authorId = 1, bookId = 2;
 
+insert into Book_2_author set authorId = 2, bookId = 2;
+
+insert into Book_2_author set authorId = 4, bookId = 3;
+
+insert into Book_2_author set authorId = 6, bookId = 3;
+
+insert into Book_2_author set authorId = 6, bookId = 4;
+
+insert into Book_2_author set authorId = 6, bookId = 5;
+
+insert into Book_2_author set authorId = 4, bookId = 5;
+
+insert into Book_2_author set authorId = 1, bookId = 6;
+
+insert into Book_2_author set authorId = 2, bookId = 6;
+
+insert into Book_2_author set authorId = 4, bookId = 7;
+
+insert into Book_2_author set authorId = 1, bookId = 8;
+
+insert into Book_2_author set authorId = 2, bookId = 8;
+
+insert into Book_2_author set authorId = 6, bookId = 8;
+
+insert into Book_2_author set authorId = 4, bookId = 10;
+
+insert into Book_2_author set authorId = 7, bookId = 1;

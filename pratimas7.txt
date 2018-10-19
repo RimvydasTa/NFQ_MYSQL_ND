@@ -43,7 +43,7 @@ insert into Book_2_author set authorId = 4, bookId = 10;
 
 select b.title,  group_concat(a.name separator ',') as Authors_group from Books b
                  left join Book_2_author b2a on b2a.bookId = b.bookId
-                 left join Authors a on a.authorId = b2a.authorId group by b.title order by b.title;
+                 left join Authors a on a.authorId = b2a.authorId group by b.bookId order by b.title;
 
 
 
